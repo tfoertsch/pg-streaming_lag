@@ -1,0 +1,43 @@
+{
+   "name": "streaming_lag",
+   "abstract": "A custom background worker process to measure lag in units of time",
+   "version": "0.0.1",
+   "maintainer": "Torsten Förtsch <torsten.foertsch@gmx.net>",
+   "license": {
+      "PostgreSQL": "http://www.postgresql.org/about/licence"
+   },
+   "prereqs": {
+      "runtime": {
+         "requires": {
+            "PostgreSQL": "9.3.0"
+         }
+      }
+   },
+   "provides": {
+      "streaming_lag": {
+         "abstract": "A custom background worker process to measure lag in units of time",
+         "file": "streaming_lag--0.0.1.sql",
+         "docfile": "README.md",
+         "version": "0.0.1"
+      }
+   },
+   "resources": {
+      "repository": {
+        "url":  "git://github.com/tfoertsch/pg-streaming_lag.git",
+        "web":  "https://github.com/tfoertsch/pg-streaming_lag.git",
+        "type": "git"
+      }
+   },
+   "meta-spec": {
+      "version": "1.0.0",
+      "url": "http://pgxn.org/meta/spec.txt"
+   },
+   "generated_by": "Torsten Förtsch",
+   "tags": [
+       "custom background worker",
+       "bgw",
+       "streaming",
+       "replication",
+       "lag"
+   ]
+}
