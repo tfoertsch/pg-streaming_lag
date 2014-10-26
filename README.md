@@ -1,4 +1,4 @@
-#streaming_lag 0.0.1#
+#streaming_lag#
 
 streaming_lag is an experimental extension to measure the lag of a
 streaming slave in units of time instead of bytes.
@@ -31,7 +31,7 @@ variable to it:
 export PG_CONFIG=/path/to/pg_config
 make && sudo make install
 ```
-##Creat and configure the extension##
+##Create and configure the extension##
 
 The next step is to create the extension and to configure it. Since
 streaming replication works on the whole cluster, the extension is
