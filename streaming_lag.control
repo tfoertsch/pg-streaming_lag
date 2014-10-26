@@ -1,0 +1,6 @@
+# streaming_lag extension
+comment = 'streaming lag in seconds instead of bytes'
+default_version = '0.0.1'
+module_pathname = '$libdir/streaming_lag'
+relocatable = true
+superuser = true
