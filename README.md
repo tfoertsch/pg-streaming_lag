@@ -94,11 +94,9 @@ LOG:  streaming_lag: initialized, database objects validated
 * `streaming_lag.database`
 specifies the database where the extension was created.
 To change the value postgres has to be restarted.
-
 * `streaming_lag.schema`
 the schema
 To change the value postgres has to be restarted.
-
 * `streaming_lag.precision`
 specifies the frequency at which the timestamp is written in
 milliseconds. By default a timestamp is written every 5000ms.
@@ -127,3 +125,27 @@ postgres=# select * from lag.streaming_lag;
  00:00:04.647359
 (1 row)
 ```
+
+##A quick test##
+
+For a quick test, I configured streaming replication over WIFI to
+my notebook and installed the extension. Then I created a table with
+10000000 rows and 1 column.
+
+Using
+
+```sql
+select clock_timestamp(), * from streaming_lag;
+\watch 1
+```
+
+in `psql` I watched the lag on the notebook while
+
+```sql
+UPDATE tbl SET i=i;
+```
+
+Then I used the output produced to generate this image:
+
+![diagram: streaming lag](streaming_lag.png)
+
