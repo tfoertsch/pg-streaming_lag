@@ -28,8 +28,8 @@ not found in your `$PATH`, point the `PG_CONFIG` environment
 variable to it:
 
 ```
-export PG_CONFIG=/path/to/pg_config
-make && sudo make install
+     PG_CONFIG=/path/to/pg_config make -e &&
+sudo PG_CONFIG=/path/to/pg_config make -e install
 ```
 ##Create and configure the extension##
 
